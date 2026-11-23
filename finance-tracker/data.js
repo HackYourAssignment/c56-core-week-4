@@ -1,2 +1,51 @@
 // Place here the transaction data array. Use it in your application as needed.
-const transactions = [];
+export const transactions = [
+  {
+    id: 1,
+    type: 'income',
+    category: 'salary',
+    amount: 3000,
+    description: 'Monthly salary',
+    date: '2025-02-15',
+  },
+  {
+    id: 2,
+    type: 'income',
+    category: 'salary',
+    amount: 2800,
+    description: 'Wifes salary',
+    date: '2025-02-19',
+  },
+  {
+    id: 3,
+    type: 'income',
+    category: 'benefits',
+    amount: 3800,
+    description: 'Benefits from the government',
+    date: '2025-02-11',
+  },
+  {
+    id: 4,
+    type: 'expense',
+    category: 'rent',
+    amount: 900,
+    description: 'Monthly rent',
+    date: '2025-03-21',
+  },
+  {
+    id: 5,
+    type: 'expense',
+    category: 'car',
+    amount: 300,
+    description: 'car maintenance',
+    date: '2025-03-21',
+  },
+  {
+    id: 6,
+    type: 'expense',
+    category: 'groceries',
+    amount: 380,
+    description: 'shopping & food',
+    date: '2025-03-29',
+  },
+];
