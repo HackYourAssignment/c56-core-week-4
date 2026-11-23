@@ -39,6 +39,40 @@ const transactions = [
     description: 'Train tickets',
     date: '2025-01-19',
   },
+
+    {
+    id: 7,
+    type: 'expense',
+    category: 'food',
+    amount: 300,
+    description: 'February groceries',
+    date: '2025-02-10',
+    },
+    {
+    id: 8,
+    type: 'expense',
+    category: 'rent',
+    amount: 1000,
+    description: 'February rent',
+    date: '2025-02-15',
+    },
+    {
+    id: 9,
+    type: 'expense',
+    category: 'rent',
+    amount: 1000,
+    description: 'March rent',
+    date: '2025-03-10',
+    },
+    {
+    id: 10,
+    type: 'expense',
+    category: 'food',
+    amount: 350,
+    description: 'March groceries',
+    date: '2025-03-15',
+    },
+
 ];
 
 module.exports = transactions;
