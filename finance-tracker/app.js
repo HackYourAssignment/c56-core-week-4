@@ -34,7 +34,7 @@ console.log(finance.getTransactionsByDate('2025-02-01', '2025-02-28'));
 
 // Bonus 2: Group by month
 console.log('\nTransactions grouped by month:');
-console.log(finance.groupTransactionsByMonth());
+console.dir(finance.groupTransactionsByMonth(), { depth: null });
 
 // Bonus 3: Average expenses
 console.log('\nAverage expense by category:');

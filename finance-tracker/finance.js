@@ -117,7 +117,12 @@ function printSummary() {
   }
 }
 
+
 function getTransactionsByDate(startDate, endDate) {
+  if (startDate > endDate) {
+    return [];
+  }
+
   let sorted = [...transactions];
 
   sorted.sort((a, b) => a.date.localeCompare(b.date));
@@ -135,6 +140,7 @@ function getTransactionsByDate(startDate, endDate) {
 
   return sorted.slice(startIndex, endIndex);
 }
+
 
 function groupTransactionsByMonth() {
   let months = {};
