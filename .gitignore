@@ -2,6 +2,7 @@
 .DS_Store
 Thumbs.db
 [Dd]esktop.ini
+node_modules/
 
 # hyf
 .hyf/score.json

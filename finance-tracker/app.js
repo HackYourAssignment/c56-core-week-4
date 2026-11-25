@@ -1,3 +1,4 @@
-// This is the entrypoint for your application.
-// node app.js
+import { printAllTransactions, printSummary } from './finance.js';
 
+printAllTransactions();
+printSummary();
