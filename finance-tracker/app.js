@@ -1,3 +1,7 @@
-// This is the entrypoint for your application.
-// node app.js
+const { printAllTransactions, printSummary } = require('./finance.js');
 
+console.log('💰 PERSONAL FINANCE TRACKER 💰');
+console.log();
+printAllTransactions();
+console.log();
+printSummary();
