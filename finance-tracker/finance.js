@@ -1,27 +1,57 @@
-function addTransaction(transaction) {
-  // TODO: Implement this function
+const transactions = require("./data");
+
+function recordTransaction(transaction) {
+  transactions.push(transaction);
 }
 
 function getTotalIncome() {
-  // TODO: Implement this function
+  return transactions
+    .filter((transaction) => transaction.type === "income")
+    .reduce((total, transaction) => total + transaction.amount, 0);
 }
 
 function getTotalExpenses() {
-  // TODO: Implement this function
+  return transactions
+    .filter((transaction) => transaction.type === "expense")
+    .reduce((total, transaction) => total + transaction.amount, 0);
 }
 
 function getBalance() {
-  // TODO: Implement this function
+  return getTotalIncome() - getTotalExpenses();
 }
 
 function getTransactionsByCategory(category) {
-  // TODO: Implement this function
+  return transactions.filter(
+    (transaction) => transaction.category === category
+  );
 }
 
 function getLargestExpense() {
-  // TODO: Implement this function
+  const expenses = transactions.filter(
+    (transaction) => transaction.type === "expense"
+  );
+
+  if (expenses.length === 0) {
+    return null;
+  }
+
+  return expenses.reduce((largest, transaction) => {
+    return transaction.amount > largest.amount ? transaction : largest;
+  });
 }
 
 function printAllTransactions() {
-  // TODO: Implement this function
+  transactions.forEach((transaction) => {
+    console.log(transaction);
+  });
 }
+
+module.exports = {
+  recordTransaction,
+  getTotalIncome,
+  getTotalExpenses,
+  getBalance,
+  getTransactionsByCategory,
+  getLargestExpense,
+  printAllTransactions,
+};
